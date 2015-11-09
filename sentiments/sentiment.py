@@ -30,8 +30,9 @@ def make_pie(percent):
 	labels = 'Postive', 'Negative'
 	fracs = [100*percent, 100.-100*percent]
 	explode=(0.05, 0)
-
-	pie(fracs, explode=explode, labels=labels,	autopct='%1.1f%%', shadow=True, startangle=90)
+	colors = ['green', 'red']
+	
+	pie(fracs, explode=explode, labels=labels,	autopct='%1.1f%%', shadow=True, startangle=90, colors = colors)
 
 	title('OPT extension comments', bbox={'facecolor':'0.8', 'pad':5})
 	savefig('pie.png')
