@@ -10,7 +10,7 @@ class Sentiments:
     def get_stats(self):
         pos = 0
         neg = 0
-        for line in f:
+        for line in self.f:
             for t in line.split('.'):
                 score = textblob.TextBlob(t).sentiment.polarity
                 if score > 0.7:
